@@ -28,9 +28,9 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		
-		//walking
-		Vector2 forceVect = new Vector2 (
+
+        //walking
+        Vector2 forceVect = new Vector2 (
 			Input.GetAxis ("Horizontal"),
 			0
 		);
