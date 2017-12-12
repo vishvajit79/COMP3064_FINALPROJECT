@@ -1,77 +1,77 @@
 fileFormatVersion: 2
-guid: 285d7030986a43b4eb0aaebc224df7e4
-timeCreated: 1510852124
+guid: 01d7d33a638484b2fa40ec467997029d
+timeCreated: 1512964640
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: imageedit_1_4190320894_0
-    21300002: imageedit_1_4190320894_1
-    21300004: imageedit_1_4190320894_2
-    21300006: imageedit_1_4190320894_3
-    21300008: imageedit_1_4190320894_4
-    21300010: imageedit_1_4190320894_5
-    21300012: imageedit_1_4190320894_6
-    21300014: imageedit_1_4190320894_7
-    21300016: imageedit_1_4190320894_8
-    21300018: imageedit_1_4190320894_9
-    21300020: imageedit_1_4190320894_10
-    21300022: imageedit_1_4190320894_11
-    21300024: imageedit_1_4190320894_12
-    21300026: imageedit_1_4190320894_13
-    21300028: imageedit_1_4190320894_14
-    21300030: imageedit_1_4190320894_15
-    21300032: imageedit_1_4190320894_16
-    21300034: imageedit_1_4190320894_17
-    21300036: imageedit_1_4190320894_18
-    21300038: imageedit_1_4190320894_19
-    21300040: imageedit_1_4190320894_20
-    21300042: imageedit_1_4190320894_21
-    21300044: imageedit_1_4190320894_22
-    21300046: imageedit_1_4190320894_23
-    21300048: imageedit_1_4190320894_24
-    21300050: imageedit_1_4190320894_25
-    21300052: imageedit_1_4190320894_26
-    21300054: imageedit_1_4190320894_27
-    21300056: imageedit_1_4190320894_28
-    21300058: imageedit_1_4190320894_29
-    21300060: imageedit_1_4190320894_30
-    21300062: imageedit_1_4190320894_31
-    21300064: imageedit_1_4190320894_32
-    21300066: imageedit_1_4190320894_33
-    21300068: imageedit_1_4190320894_34
-    21300070: imageedit_1_4190320894_35
-    21300072: imageedit_1_4190320894_36
-    21300074: imageedit_1_4190320894_37
-    21300076: imageedit_1_4190320894_38
-    21300078: imageedit_1_4190320894_39
-    21300080: imageedit_1_4190320894_40
-    21300082: imageedit_1_4190320894_41
-    21300084: imageedit_1_4190320894_42
-    21300086: imageedit_1_4190320894_43
-    21300088: imageedit_1_4190320894_44
-    21300090: imageedit_1_4190320894_45
-    21300092: imageedit_1_4190320894_46
-    21300094: imageedit_1_4190320894_47
-    21300096: imageedit_1_4190320894_48
-    21300098: imageedit_1_4190320894_49
-    21300100: imageedit_1_4190320894_50
-    21300102: imageedit_1_4190320894_51
-    21300104: imageedit_1_4190320894_52
-    21300106: imageedit_1_4190320894_53
-    21300108: imageedit_1_4190320894_54
-    21300110: imageedit_1_4190320894_55
-    21300112: imageedit_1_4190320894_56
-    21300114: imageedit_1_4190320894_57
-    21300116: imageedit_1_4190320894_58
-    21300118: imageedit_1_4190320894_59
-    21300120: imageedit_1_4190320894_60
-    21300122: imageedit_1_4190320894_61
-    21300124: imageedit_1_4190320894_62
-    21300126: imageedit_1_4190320894_63
-    21300128: imageedit_1_4190320894_64
-    21300130: imageedit_1_4190320894_65
-    21300132: imageedit_1_4190320894_66
-    21300134: imageedit_1_4190320894_67
+    21300000: player_sprites_0
+    21300002: player_sprites_1
+    21300004: player_sprites_2
+    21300006: player_sprites_3
+    21300008: player_sprites_4
+    21300010: player_sprites_5
+    21300012: player_sprites_6
+    21300014: player_sprites_7
+    21300016: player_sprites_8
+    21300018: player_sprites_9
+    21300020: player_sprites_10
+    21300022: player_sprites_11
+    21300024: player_sprites_12
+    21300026: player_sprites_13
+    21300028: player_sprites_14
+    21300030: player_sprites_15
+    21300032: player_sprites_16
+    21300034: player_sprites_17
+    21300036: player_sprites_18
+    21300038: player_sprites_19
+    21300040: player_sprites_20
+    21300042: player_sprites_21
+    21300044: player_sprites_22
+    21300046: player_sprites_23
+    21300048: player_sprites_24
+    21300050: player_sprites_25
+    21300052: player_sprites_26
+    21300054: player_sprites_27
+    21300056: player_sprites_28
+    21300058: player_sprites_29
+    21300060: player_sprites_30
+    21300062: player_sprites_31
+    21300064: player_sprites_32
+    21300066: player_sprites_33
+    21300068: player_sprites_34
+    21300070: player_sprites_35
+    21300072: player_sprites_36
+    21300074: player_sprites_37
+    21300076: player_sprites_38
+    21300078: player_sprites_39
+    21300080: player_sprites_40
+    21300082: player_sprites_41
+    21300084: player_sprites_42
+    21300086: player_sprites_43
+    21300088: player_sprites_44
+    21300090: player_sprites_45
+    21300092: player_sprites_46
+    21300094: player_sprites_47
+    21300096: player_sprites_48
+    21300098: player_sprites_49
+    21300100: player_sprites_50
+    21300102: player_sprites_51
+    21300104: player_sprites_52
+    21300106: player_sprites_53
+    21300108: player_sprites_54
+    21300110: player_sprites_55
+    21300112: player_sprites_56
+    21300114: player_sprites_57
+    21300116: player_sprites_58
+    21300118: player_sprites_59
+    21300120: player_sprites_60
+    21300122: player_sprites_61
+    21300124: player_sprites_62
+    21300126: player_sprites_63
+    21300128: player_sprites_64
+    21300130: player_sprites_65
+    21300132: player_sprites_66
+    21300134: player_sprites_67
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -98,7 +98,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -113,7 +113,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 1
+  spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -126,7 +126,7 @@ TextureImporter:
   - buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,15 +134,7 @@ TextureImporter:
   - buildTarget: Standalone
     maxTextureSize: 2048
     textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-  - buildTarget: Android
-    maxTextureSize: 2048
-    textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -151,7 +143,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: imageedit_1_4190320894_0
+      name: player_sprites_0
       rect:
         serializedVersion: 2
         x: 0
@@ -165,7 +157,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_1
+      name: player_sprites_1
       rect:
         serializedVersion: 2
         x: 28
@@ -179,7 +171,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_2
+      name: player_sprites_2
       rect:
         serializedVersion: 2
         x: 161
@@ -193,7 +185,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_3
+      name: player_sprites_3
       rect:
         serializedVersion: 2
         x: 295
@@ -207,7 +199,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_4
+      name: player_sprites_4
       rect:
         serializedVersion: 2
         x: 431
@@ -221,7 +213,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_5
+      name: player_sprites_5
       rect:
         serializedVersion: 2
         x: 569
@@ -235,7 +227,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_6
+      name: player_sprites_6
       rect:
         serializedVersion: 2
         x: 706
@@ -249,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_7
+      name: player_sprites_7
       rect:
         serializedVersion: 2
         x: 827
@@ -263,7 +255,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_8
+      name: player_sprites_8
       rect:
         serializedVersion: 2
         x: 958
@@ -277,7 +269,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_9
+      name: player_sprites_9
       rect:
         serializedVersion: 2
         x: 1089
@@ -291,7 +283,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_10
+      name: player_sprites_10
       rect:
         serializedVersion: 2
         x: 1231
@@ -305,7 +297,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_11
+      name: player_sprites_11
       rect:
         serializedVersion: 2
         x: 1370
@@ -319,7 +311,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_12
+      name: player_sprites_12
       rect:
         serializedVersion: 2
         x: 652
@@ -333,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_13
+      name: player_sprites_13
       rect:
         serializedVersion: 2
         x: 796
@@ -347,7 +339,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_14
+      name: player_sprites_14
       rect:
         serializedVersion: 2
         x: 798
@@ -361,7 +353,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_15
+      name: player_sprites_15
       rect:
         serializedVersion: 2
         x: 1014
@@ -375,7 +367,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_16
+      name: player_sprites_16
       rect:
         serializedVersion: 2
         x: 1086
@@ -389,7 +381,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_17
+      name: player_sprites_17
       rect:
         serializedVersion: 2
         x: 160
@@ -403,7 +395,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_18
+      name: player_sprites_18
       rect:
         serializedVersion: 2
         x: 282
@@ -417,7 +409,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_19
+      name: player_sprites_19
       rect:
         serializedVersion: 2
         x: 409
@@ -431,7 +423,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_20
+      name: player_sprites_20
       rect:
         serializedVersion: 2
         x: 508
@@ -445,7 +437,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_21
+      name: player_sprites_21
       rect:
         serializedVersion: 2
         x: 1292
@@ -459,7 +451,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_22
+      name: player_sprites_22
       rect:
         serializedVersion: 2
         x: 28
@@ -473,7 +465,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_23
+      name: player_sprites_23
       rect:
         serializedVersion: 2
         x: 1160
@@ -487,7 +479,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_24
+      name: player_sprites_24
       rect:
         serializedVersion: 2
         x: 1212
@@ -501,7 +493,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_25
+      name: player_sprites_25
       rect:
         serializedVersion: 2
         x: 1358
@@ -515,7 +507,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_26
+      name: player_sprites_26
       rect:
         serializedVersion: 2
         x: 1081
@@ -529,7 +521,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_27
+      name: player_sprites_27
       rect:
         serializedVersion: 2
         x: 1216
@@ -543,7 +535,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_28
+      name: player_sprites_28
       rect:
         serializedVersion: 2
         x: 1362
@@ -557,7 +549,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_29
+      name: player_sprites_29
       rect:
         serializedVersion: 2
         x: 1461
@@ -571,7 +563,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_30
+      name: player_sprites_30
       rect:
         serializedVersion: 2
         x: 30
@@ -585,7 +577,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_31
+      name: player_sprites_31
       rect:
         serializedVersion: 2
         x: 145
@@ -599,7 +591,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_32
+      name: player_sprites_32
       rect:
         serializedVersion: 2
         x: 278
@@ -613,7 +605,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_33
+      name: player_sprites_33
       rect:
         serializedVersion: 2
         x: 441
@@ -627,7 +619,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_34
+      name: player_sprites_34
       rect:
         serializedVersion: 2
         x: 598
@@ -641,7 +633,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_35
+      name: player_sprites_35
       rect:
         serializedVersion: 2
         x: 837
@@ -655,7 +647,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_36
+      name: player_sprites_36
       rect:
         serializedVersion: 2
         x: 935
@@ -669,7 +661,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_37
+      name: player_sprites_37
       rect:
         serializedVersion: 2
         x: 1054
@@ -683,7 +675,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_38
+      name: player_sprites_38
       rect:
         serializedVersion: 2
         x: 1453
@@ -697,7 +689,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_39
+      name: player_sprites_39
       rect:
         serializedVersion: 2
         x: 714
@@ -711,7 +703,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_40
+      name: player_sprites_40
       rect:
         serializedVersion: 2
         x: 1063
@@ -725,7 +717,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_41
+      name: player_sprites_41
       rect:
         serializedVersion: 2
         x: 0
@@ -739,7 +731,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_42
+      name: player_sprites_42
       rect:
         serializedVersion: 2
         x: 11
@@ -753,7 +745,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_43
+      name: player_sprites_43
       rect:
         serializedVersion: 2
         x: 146
@@ -767,7 +759,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_44
+      name: player_sprites_44
       rect:
         serializedVersion: 2
         x: 268
@@ -781,7 +773,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_45
+      name: player_sprites_45
       rect:
         serializedVersion: 2
         x: 419
@@ -795,7 +787,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_46
+      name: player_sprites_46
       rect:
         serializedVersion: 2
         x: 566
@@ -809,7 +801,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_47
+      name: player_sprites_47
       rect:
         serializedVersion: 2
         x: 684
@@ -823,7 +815,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_48
+      name: player_sprites_48
       rect:
         serializedVersion: 2
         x: 789
@@ -837,7 +829,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_49
+      name: player_sprites_49
       rect:
         serializedVersion: 2
         x: 903
@@ -851,7 +843,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_50
+      name: player_sprites_50
       rect:
         serializedVersion: 2
         x: 1036
@@ -865,7 +857,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_51
+      name: player_sprites_51
       rect:
         serializedVersion: 2
         x: 1149
@@ -879,7 +871,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_52
+      name: player_sprites_52
       rect:
         serializedVersion: 2
         x: 1256
@@ -893,7 +885,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_53
+      name: player_sprites_53
       rect:
         serializedVersion: 2
         x: 1376
@@ -907,7 +899,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_54
+      name: player_sprites_54
       rect:
         serializedVersion: 2
         x: 13
@@ -921,7 +913,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_55
+      name: player_sprites_55
       rect:
         serializedVersion: 2
         x: 131
@@ -935,7 +927,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_56
+      name: player_sprites_56
       rect:
         serializedVersion: 2
         x: 252
@@ -949,7 +941,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_57
+      name: player_sprites_57
       rect:
         serializedVersion: 2
         x: 358
@@ -963,7 +955,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_58
+      name: player_sprites_58
       rect:
         serializedVersion: 2
         x: 461
@@ -977,7 +969,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_59
+      name: player_sprites_59
       rect:
         serializedVersion: 2
         x: 560
@@ -991,7 +983,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_60
+      name: player_sprites_60
       rect:
         serializedVersion: 2
         x: 657
@@ -1005,7 +997,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_61
+      name: player_sprites_61
       rect:
         serializedVersion: 2
         x: 749
@@ -1019,7 +1011,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_62
+      name: player_sprites_62
       rect:
         serializedVersion: 2
         x: 888
@@ -1033,7 +1025,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_63
+      name: player_sprites_63
       rect:
         serializedVersion: 2
         x: 1012
@@ -1047,7 +1039,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_64
+      name: player_sprites_64
       rect:
         serializedVersion: 2
         x: 1134
@@ -1061,7 +1053,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_65
+      name: player_sprites_65
       rect:
         serializedVersion: 2
         x: 1256
@@ -1075,7 +1067,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_66
+      name: player_sprites_66
       rect:
         serializedVersion: 2
         x: 1372
@@ -1089,7 +1081,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: imageedit_1_4190320894_67
+      name: player_sprites_67
       rect:
         serializedVersion: 2
         x: 0
