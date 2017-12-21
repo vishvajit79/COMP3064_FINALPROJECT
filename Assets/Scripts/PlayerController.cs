@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour {
 		_jumpSound = sounds[1];
 		_doorSound = sounds[2];
 		_clockSound = sounds[3];
-	    _obstacleSound = sounds[4];
+		_obstacleSound = sounds[4];
 
 	}
 
@@ -182,12 +182,12 @@ public class PlayerController : MonoBehaviour {
 			}
 			else if(!godMode)
 			{
-			    if (_obstacleSound != null)
-			    {
-			        _obstacleSound.Play();
-			    }
+				if (_obstacleSound != null)
+				{
+					_obstacleSound.Play();
+				}
 				StartCoroutine(Blink());
-			    StartCoroutine(GodMod(3));
+				StartCoroutine(GodMod(3));
 				Player.Instance.Life--;
 			}
 		}
@@ -211,6 +211,7 @@ public class PlayerController : MonoBehaviour {
 			{
 				_doorSound.Play();
 			}
+			Thread.Sleep(1000);
 			Destroy(gameObject);
 			gameController.GameOver();
 			gameController.MenuLabel.text = "Level 1 finished - Click on Level 2 to play next level";

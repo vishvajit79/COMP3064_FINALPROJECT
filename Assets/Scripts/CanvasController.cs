@@ -235,6 +235,7 @@ public class CanvasController : MonoBehaviour {
 
 	public void ResumeButtonClick()
 	{
+	    Time.timeScale = 1;
 		TitleLabel.gameObject.SetActive(false);
 		MenuLabel.gameObject.SetActive(false);
 		TimerLabel.gameObject.SetActive(true);
