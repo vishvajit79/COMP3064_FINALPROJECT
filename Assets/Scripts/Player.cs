@@ -3,13 +3,13 @@
 public class Player {
 
     //public variable
-    public CanvasController gameController;
+    public CanvasController CanvasController;
 
     //private variables
-    private int _score = 0;
-    private int _life = 5;
+    private int _score;
+    private int _life = 2;
     private int _highScore;
-    private int _timer = 30;
+    private int _timer = 20;
     
 
     private static Player _instance; //declaring player instance
@@ -34,12 +34,12 @@ public class Player {
         set
         {
             _score = value;
-            gameController.UpdateUi();
+            CanvasController.UpdateUi();
             if (_score > _highScore)
             {
                 _highScore = _score;
                 PlayerPrefs.SetInt("highScore", _highScore);
-                gameController.UpdateUi();
+                CanvasController.UpdateUi();
             }
         }
 
@@ -55,11 +55,11 @@ public class Player {
             if (_score > _highScore)
             {
                 _highScore = _score;
-                gameController.UpdateUi();
+                CanvasController.UpdateUi();
             }
             //sets highscore
             PlayerPrefs.SetInt("highScore", _highScore);
-            gameController.UpdateUi();
+            CanvasController.UpdateUi();
         }
 
     }
@@ -70,11 +70,12 @@ public class Player {
         set
         {
             _timer = value;
-            gameController.UpdateUi();
+            CanvasController.UpdateUi();
             if (_timer <= 0)
             {
-                gameController.UpdateUi();
-                gameController.GameOver();
+                Instance.Life--;
+                Instance.Timer = 30;
+                CanvasController.UpdateUi();
             }
         }
 
@@ -93,13 +94,13 @@ public class Player {
             {
                 //game over
                 _highScore = _score;
-                gameController.UpdateUi();
-                gameController.GameOver();
+                CanvasController.UpdateUi();
+                CanvasController.GameOver();
             }
             else
             {
                 //lifeLabel.text = "Life: " + _life;
-                gameController.UpdateUi();
+                CanvasController.UpdateUi();
             }
         }
     }

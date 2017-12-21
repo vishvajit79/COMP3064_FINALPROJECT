@@ -46,12 +46,20 @@ public class CanvasController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Player.Instance.gameController = this;
+		Player.Instance.CanvasController = this;
 		StartCounting();
 		Player.Instance.Score = 0;
-		Player.Instance.Life = 5;
-		Player.Instance.Timer = 30;
-		Initialize();
+		Player.Instance.Life = 2;
+		Player.Instance.Timer = 20;
+		if (PlayerPrefs.GetInt("isDead") == 1)
+		{
+			GameStart();
+		    PlayerPrefs.SetInt("isDead", 0);
+		}
+		else
+		{
+			Initialize();
+		}
 	}
 
 	private void StartCounting()
@@ -92,8 +100,8 @@ public class CanvasController : MonoBehaviour {
 	{
 		Time.timeScale = 0;
 		Player.Instance.Score = 0;
-		Player.Instance.Life = 5;
-		Player.Instance.Timer = 30;
+		Player.Instance.Life = 2;
+		Player.Instance.Timer = 20;
 		//gets high score from previous playerprefs save data
 		Player.Instance.HighScore = PlayerPrefs.GetInt("highScore");
 		TitleLabel.gameObject.SetActive(true);
@@ -117,6 +125,8 @@ public class CanvasController : MonoBehaviour {
 	public void GameStart()
 	{
 		Time.timeScale = 1;
+		Player.Instance.Life = 2;
+		Player.Instance.Timer = 20;
 		//gets high score from previous save data
 		Player.Instance.HighScore = PlayerPrefs.GetInt("highScore");
 		TitleLabel.gameObject.SetActive(false);
@@ -180,6 +190,7 @@ public class CanvasController : MonoBehaviour {
 		PauseButton.gameObject.SetActive(false);
 		PauseButton.gameObject.SetActive(false);
 		MenuLabel.text = "Game Over\nPlease select the level you want to play";
+		PlayerPrefs.SetInt("isDead", 1);
 	}
 
 	public void UpdateUi()
@@ -200,7 +211,16 @@ public class CanvasController : MonoBehaviour {
 
 	public void Level1ButtonClick()
 	{
-		GameStart();
+		if (PlayerPrefs.GetInt("isDead") == 1)
+		{
+			PlayerPrefs.SetInt("isDead", 1);
+			SceneManager.LoadScene("main");
+		}
+		else
+		{
+			GameStart();
+		}
+	   
 	}
 
 	public void Level2ButtonClick()

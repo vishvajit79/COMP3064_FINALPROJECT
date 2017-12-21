@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
@@ -28,6 +29,9 @@ public class PlayerController : MonoBehaviour {
 	private AudioSource _jumpSound;
 	private AudioSource _doorSound;
 	private AudioSource _clockSound;
+	private AudioSource _obstacleSound;
+
+	private bool godMode = false;
 
 
 	// Use this for initialization
@@ -40,6 +44,7 @@ public class PlayerController : MonoBehaviour {
 		_jumpSound = sounds[1];
 		_doorSound = sounds[2];
 		_clockSound = sounds[3];
+	    _obstacleSound = sounds[4];
 
 	}
 
@@ -96,7 +101,7 @@ public class PlayerController : MonoBehaviour {
 		CheckBounds ();
 		gameObject.transform.position = _currentPos;
 		_animator.SetBool ("jump", !IsGrounded ());
-
+		
 	}
 
 	private bool IsGrounded(){
@@ -128,21 +133,62 @@ public class PlayerController : MonoBehaviour {
 		}
 	}
 
+	//flashes player after collision for 3 times
+	public IEnumerator Blink()
+	{
+		Color c;
+		Renderer renderer = gameObject.GetComponent<Renderer>();
+		for (int i = 0; i < 1; i++)
+		{
+			for (float f = 1f; f >= 0; f -= 0.1f)
+			{
+				c = renderer.material.color;
+				c.a = f;
+				renderer.material.color = c;
+				yield return new WaitForSeconds(0.1f);
+			}
+			for (float f = 0f; f <= 1; f += 0.1f)
+			{
+				c = renderer.material.color;
+				c.a = f;
+				renderer.material.color = c;
+				yield return new WaitForSeconds(0.1f);
+			}
+		}
+
+	}
+
+	public IEnumerator GodMod(int x) 
+	{
+		godMode = true;
+		yield return new WaitForSeconds(x);
+		godMode = false;
+	}
 
 	public void OnCollisionEnter2D(Collision2D coll)
 	{
 		if (coll.gameObject.tag == "obstacle") {
 			if (Input.GetKey(KeyCode.Space))
 			{
+				StartCoroutine(GodMod(3));
 				Debug.Log("Collision obstacle\n");
 				if (_hitSound != null)
 				{
 					_hitSound.Play();
 				}
-				coll.gameObject.
-				GetComponent<ObstacleManager>()
-				.DestroyMe();
+				coll.gameObject.GetComponent<ObstacleManager>()
+					.DestroyMe();
 				Player.Instance.Score += 100;
+			}
+			else if(!godMode)
+			{
+			    if (_obstacleSound != null)
+			    {
+			        _obstacleSound.Play();
+			    }
+				StartCoroutine(Blink());
+			    StartCoroutine(GodMod(3));
+				Player.Instance.Life--;
 			}
 		}
 		if (coll.gameObject.tag == "clock")
@@ -156,6 +202,7 @@ public class PlayerController : MonoBehaviour {
 			   GetComponent<ObstacleManager>()
 			   .DestroyMe();
 			Player.Instance.Timer += 10;
+			StartCoroutine(Blink());
 		}
 		if (coll.gameObject.tag == "door")
 		{
