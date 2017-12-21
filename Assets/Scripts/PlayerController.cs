@@ -14,23 +14,45 @@ public class PlayerController : MonoBehaviour {
 	private float rightX;
 	[SerializeField]
 	private float topY;
+	//public variables
+	[SerializeField]
+	CanvasController gameController;
 
 	private Vector2 _currentPos;
 
 	private Rigidbody2D _rigidBody = null;
 	private Animator _animator = null;
 
+	private AudioSource[] sounds;
+	private AudioSource _hitSound;
+	private AudioSource _jumpSound;
+	private AudioSource _doorSound;
+	private AudioSource _clockSound;
+
+
 	// Use this for initialization
 	void Start () {
 		_animator = gameObject.GetComponent<Animator> ();
 		_rigidBody = gameObject.GetComponent<Rigidbody2D> ();
+
+		sounds = GetComponents<AudioSource>();
+		_hitSound = sounds[0];
+		_jumpSound = sounds[1];
+		_doorSound = sounds[2];
+		_clockSound = sounds[3];
+
 	}
-	
+
+	private void Update()
+	{
+		
+	}
+
 	// Update is called once per frame
 	void FixedUpdate () {
 
-        //walking
-        Vector2 forceVect = new Vector2 (
+		//walking
+		Vector2 forceVect = new Vector2 (
 			Input.GetAxis ("Horizontal"),
 			0
 		);
@@ -40,6 +62,10 @@ public class PlayerController : MonoBehaviour {
 		float jump = Input.GetAxis("Jump");
 
 		if (jump > 0 && IsGrounded()) {
+			if (_jumpSound != null)
+			{
+				_jumpSound.Play();
+			}
 			_rigidBody.AddForce (Vector2.up * jumpMultiplier);
 		}
 
@@ -53,6 +79,18 @@ public class PlayerController : MonoBehaviour {
 		} else if (_rigidBody.velocity.x < 0)  {
 			gameObject.transform.localScale = new Vector3 (-2, 2, 2);
 		}
+
+
+		//hit
+		if (Input.GetKey(KeyCode.Space))
+		{
+			Debug.Log("firing");
+			_animator.SetBool("fire", true);
+		}
+		else {
+			_animator.SetBool("fire", false);
+		}
+
 
 		_currentPos = gameObject.transform.position;
 		CheckBounds ();
@@ -89,4 +127,47 @@ public class PlayerController : MonoBehaviour {
 			_currentPos.y = topY;
 		}
 	}
+
+
+	public void OnCollisionEnter2D(Collision2D coll)
+	{
+		if (coll.gameObject.tag == "obstacle") {
+			if (Input.GetKey(KeyCode.Space))
+			{
+				Debug.Log("Collision obstacle\n");
+				if (_hitSound != null)
+				{
+					_hitSound.Play();
+				}
+				coll.gameObject.
+				GetComponent<ObstacleManager>()
+				.DestroyMe();
+				Player.Instance.Score += 100;
+			}
+		}
+		if (coll.gameObject.tag == "clock")
+		{
+			Debug.Log("Collision clock\n");
+			if (_clockSound != null)
+			{
+				_clockSound.Play();
+			}
+			coll.gameObject.
+			   GetComponent<ObstacleManager>()
+			   .DestroyMe();
+			Player.Instance.Timer += 10;
+		}
+		if (coll.gameObject.tag == "door")
+		{
+			Debug.Log("Collision door\n");
+			if (_doorSound != null)
+			{
+				_doorSound.Play();
+			}
+			Destroy(gameObject);
+			gameController.GameOver();
+			gameController.MenuLabel.text = "Level 1 finished - Click on Level 2 to play next level";
+		}
+	}
+
 }

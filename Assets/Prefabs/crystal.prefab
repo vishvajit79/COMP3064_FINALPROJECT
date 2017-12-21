@@ -21,9 +21,10 @@ GameObject:
   - component: {fileID: 4304809145183934}
   - component: {fileID: 212490091874095262}
   - component: {fileID: 60751918456996880}
+  - component: {fileID: 114444812974528750}
   m_Layer: 0
   m_Name: crystal
-  m_TagString: Untagged
+  m_TagString: obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -77,6 +78,17 @@ PolygonCollider2D:
       - {x: 0.1966567, y: -0.14347148}
       - {x: 0.24582815, y: -0.10999998}
       - {x: 0.285, y: 0.04}
+--- !u!114 &114444812974528750
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1714465800421916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5e0e4d8a6d1204f94bfafe0e488f73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212490091874095262
 SpriteRenderer:
   m_ObjectHideFlags: 1
