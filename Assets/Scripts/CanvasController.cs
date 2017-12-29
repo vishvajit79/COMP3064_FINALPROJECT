@@ -44,8 +44,10 @@ public class CanvasController : MonoBehaviour {
 	public static CanvasController Instance;
 	
 
+
 	// Use this for initialization
 	void Start () {
+		
 		Player.Instance.CanvasController = this;
 		StartCounting();
 		Player.Instance.Score = 0;
@@ -54,7 +56,7 @@ public class CanvasController : MonoBehaviour {
 		if (PlayerPrefs.GetInt("isDead") == 1)
 		{
 			GameStart();
-		    PlayerPrefs.SetInt("isDead", 0);
+			PlayerPrefs.SetInt("isDead", 0);
 		}
 		else
 		{
@@ -225,7 +227,28 @@ public class CanvasController : MonoBehaviour {
 
 	public void Level2ButtonClick()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+	    // Create a temporary reference to the current scene.
+	    Scene currentScene = SceneManager.GetActiveScene();
+
+	    // Retrieve the name of this scene.
+	    string sceneName = currentScene.name;
+	    if (sceneName == "level2")
+	    {
+	        if (PlayerPrefs.GetInt("isDead") == 1)
+	        {
+	            PlayerPrefs.SetInt("isDead", 1);
+	            SceneManager.LoadScene("level2");
+	        }
+	        else
+	        {
+	            GameStart();
+	        }
+        }
+	    else
+	    {
+	        SceneManager.LoadScene("level2");
+	    }
+
 	}
 
 	public void Level3ButtonClick()
@@ -235,7 +258,7 @@ public class CanvasController : MonoBehaviour {
 
 	public void ResumeButtonClick()
 	{
-	    Time.timeScale = 1;
+		Time.timeScale = 1;
 		TitleLabel.gameObject.SetActive(false);
 		MenuLabel.gameObject.SetActive(false);
 		TimerLabel.gameObject.SetActive(true);
