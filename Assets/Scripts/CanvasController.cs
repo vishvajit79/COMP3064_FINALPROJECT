@@ -42,12 +42,17 @@ public class CanvasController : MonoBehaviour {
 	public Text PauseButtonText;
 
 	public static CanvasController Instance;
-	
+	public PlayerController PlayerController;
+    [SerializeField] public GameObject GameObject;
+
+	private AudioSource _lifeSound;
+
 
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		_lifeSound = gameObject.GetComponent<AudioSource>();
 		Player.Instance.CanvasController = this;
 		StartCounting();
 		Player.Instance.Score = 0;
@@ -275,5 +280,14 @@ public class CanvasController : MonoBehaviour {
 		QuitButtonText.gameObject.SetActive(false);
 		PauseButton.gameObject.SetActive(false);
 		PauseButton.gameObject.SetActive(false);
+	}
+
+	public void PlayLifeDecreaseSound()
+	{
+	    StartCoroutine(PlayerController.Blink());
+		if (_lifeSound != null)
+		{
+			_lifeSound.Play();
+		}
 	}
 }

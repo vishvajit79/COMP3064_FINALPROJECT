@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D _rigidBody = null;
     private Animator _animator = null;
 
-    private AudioSource[] sounds;
+    private AudioSource[] _sounds;
     private AudioSource _hitSound;
     private AudioSource _jumpSound;
     private AudioSource _doorSound;
@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource _obstacleSound;
 
     private bool godMode = false;
+    private int counter = 0;
 
 
     // Use this for initialization
@@ -42,12 +43,12 @@ public class PlayerController : MonoBehaviour
         _animator = gameObject.GetComponent<Animator>();
         _rigidBody = gameObject.GetComponent<Rigidbody2D>();
 
-        sounds = GetComponents<AudioSource>();
-        _hitSound = sounds[0];
-        _jumpSound = sounds[1];
-        _doorSound = sounds[2];
-        _clockSound = sounds[3];
-        _obstacleSound = sounds[4];
+        _sounds = GetComponents<AudioSource>();
+        _hitSound = _sounds[0];
+        _jumpSound = _sounds[1];
+        _doorSound = _sounds[2];
+        _clockSound = _sounds[3];
+        _obstacleSound = _sounds[4];
 
     }
 
@@ -206,19 +207,24 @@ public class PlayerController : MonoBehaviour
                 Player.Instance.Life--;
             }
         }
-        if (coll.gameObject.tag == "obstacle")
+        if (coll.gameObject.tag == "enemy")
         {
             if (Input.GetKey(KeyCode.Space))
             {
+                counter += 1;
                 StartCoroutine(GodMod(3));
                 Debug.Log("Collision obstacle\n");
                 if (_hitSound != null)
                 {
                     _hitSound.Play();
                 }
-                coll.gameObject.GetComponent<ObstacleManager>()
-                    .DestroyMe();
-                Player.Instance.Score += 100;
+                if (counter == 2)
+                {
+                    coll.gameObject.GetComponent<ObstacleManager>()
+                        .DestroyMe();
+                    Player.Instance.Score += 100;
+                }
+                
             }
             else if (!godMode)
             {
@@ -273,5 +279,4 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
-
 }

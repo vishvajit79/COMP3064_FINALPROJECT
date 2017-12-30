@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Debug = System.Diagnostics.Debug;
 
 public class CameraFollow : MonoBehaviour {
 
@@ -24,7 +25,8 @@ public class CameraFollow : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		gameObject.transform.position = 
+	    Debug.Assert(player != null, "player != null");
+	    gameObject.transform.position = 
 			new Vector3 (
 				player.position.x,
 				player.position.y,

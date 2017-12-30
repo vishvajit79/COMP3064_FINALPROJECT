@@ -73,6 +73,7 @@ public class Player {
             CanvasController.UpdateUi();
             if (_timer <= 0)
             {
+                CanvasController.PlayLifeDecreaseSound();
                 Instance.Life--;
                 Instance.Timer = 30;
                 CanvasController.UpdateUi();

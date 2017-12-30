@@ -11,7 +11,7 @@ public class EnemyController : MonoBehaviour {
 	private Rigidbody2D _rigidBody;
 	private Transform _transform;
 	private bool isCollided = false;
-
+    public PlayerController PlayerController;
 	private float _width, _height;
 
 	// Use this for initialization
@@ -55,16 +55,21 @@ public class EnemyController : MonoBehaviour {
 		FixedUpdate();
 	}
 
-    public void Update()
-    {
-        FixedUpdate();
-    }
+	public void Update()
+	{
+		FixedUpdate();
+	}
 
 	public void OnCollisionEnter2D(Collision2D collision2D)
 	{
 		if (collision2D.gameObject.tag == "obstacle" || collision2D.gameObject.tag == "random")
 		{
 			StartCoroutine(GodMod(0.01f));
+		}
+
+		if (collision2D.gameObject.tag == "player")
+		{
+			PlayerController.OnCollisionEnter2D(null);
 		}
 	}
 
