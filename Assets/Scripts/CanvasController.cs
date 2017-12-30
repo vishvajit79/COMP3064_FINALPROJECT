@@ -51,7 +51,7 @@ public class CanvasController : MonoBehaviour {
 		Player.Instance.CanvasController = this;
 		StartCounting();
 		Player.Instance.Score = 0;
-		Player.Instance.Life = 2;
+		Player.Instance.Life = 5;
 		Player.Instance.Timer = 20;
 		if (PlayerPrefs.GetInt("isDead") == 1)
 		{
@@ -102,7 +102,7 @@ public class CanvasController : MonoBehaviour {
 	{
 		Time.timeScale = 0;
 		Player.Instance.Score = 0;
-		Player.Instance.Life = 2;
+		Player.Instance.Life = 5;
 		Player.Instance.Timer = 20;
 		//gets high score from previous playerprefs save data
 		Player.Instance.HighScore = PlayerPrefs.GetInt("highScore");
@@ -127,7 +127,7 @@ public class CanvasController : MonoBehaviour {
 	public void GameStart()
 	{
 		Time.timeScale = 1;
-		Player.Instance.Life = 2;
+		Player.Instance.Life = 5;
 		Player.Instance.Timer = 20;
 		//gets high score from previous save data
 		Player.Instance.HighScore = PlayerPrefs.GetInt("highScore");
@@ -227,27 +227,27 @@ public class CanvasController : MonoBehaviour {
 
 	public void Level2ButtonClick()
 	{
-	    // Create a temporary reference to the current scene.
-	    Scene currentScene = SceneManager.GetActiveScene();
+		// Create a temporary reference to the current scene.
+		Scene currentScene = SceneManager.GetActiveScene();
 
-	    // Retrieve the name of this scene.
-	    string sceneName = currentScene.name;
-	    if (sceneName == "level2")
-	    {
-	        if (PlayerPrefs.GetInt("isDead") == 1)
-	        {
-	            PlayerPrefs.SetInt("isDead", 1);
-	            SceneManager.LoadScene("level2");
-	        }
-	        else
-	        {
-	            GameStart();
-	        }
-        }
-	    else
-	    {
-	        SceneManager.LoadScene("level2");
-	    }
+		// Retrieve the name of this scene.
+		string sceneName = currentScene.name;
+		if (sceneName == "level2")
+		{
+			if (PlayerPrefs.GetInt("isDead") == 1)
+			{
+				PlayerPrefs.SetInt("isDead", 1);
+				SceneManager.LoadScene("level2");
+			}
+			else
+			{
+				GameStart();
+			}
+		}
+		else
+		{
+			SceneManager.LoadScene("level2");
+		}
 
 	}
 
