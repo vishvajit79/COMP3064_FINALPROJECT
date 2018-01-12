@@ -521,7 +521,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4925532898160764, guid: 42f908c43a8e6264db19a9cf445c1ea9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 5.09
+      value: 4.84
       objectReference: {fileID: 0}
     - target: {fileID: 4925532898160764, guid: 42f908c43a8e6264db19a9cf445c1ea9, type: 2}
       propertyPath: m_LocalPosition.y
@@ -551,8 +551,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 31
       objectReference: {fileID: 0}
-    - target: {fileID: 60749842453139546, guid: 42f908c43a8e6264db19a9cf445c1ea9,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
@@ -560,6 +559,16 @@ Prefab:
         type: 2}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 61650928657749658, guid: 42f908c43a8e6264db19a9cf445c1ea9,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0019515455
+      objectReference: {fileID: 0}
+    - target: {fileID: 61650928657749658, guid: 42f908c43a8e6264db19a9cf445c1ea9,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.4330578
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42f908c43a8e6264db19a9cf445c1ea9, type: 2}
@@ -779,6 +788,15 @@ Prefab:
     - target: {fileID: 1246610190366010, guid: 615990aaffe8c7047a1cd7e4e6a469ee, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1246610190366010, guid: 615990aaffe8c7047a1cd7e4e6a469ee, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 114580974070602568, guid: 615990aaffe8c7047a1cd7e4e6a469ee,
+        type: 2}
+      propertyPath: topY
+      value: 2.35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 615990aaffe8c7047a1cd7e4e6a469ee, type: 2}
@@ -1313,7 +1331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013987f88521d4acf9f1155b20245ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1505653428}
   leftX: 0
   rightX: 41.61
   topY: 0
@@ -1441,9 +1459,40 @@ Prefab:
       propertyPath: m_Name
       value: level2_foreground (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 60431871068341436, guid: 33c462c312ad85244aa44847c19c4ae5, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 33c462c312ad85244aa44847c19c4ae5, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &785619856 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1428844443301196, guid: 33c462c312ad85244aa44847c19c4ae5,
+    type: 2}
+  m_PrefabInternal: {fileID: 785619855}
+--- !u!61 &785619857
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 785619856}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.48, y: 1.38}
+    newSize: {x: 4.48, y: 1.38}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.48, y: 1.38}
+  m_EdgeRadius: 0
 --- !u!1001 &786666555
 Prefab:
   m_ObjectHideFlags: 0
@@ -2357,6 +2406,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9ac57c9cf4d74a83a0d5f628a55885c, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &1505653428 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4269685162102402, guid: 615990aaffe8c7047a1cd7e4e6a469ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 622969094}
 --- !u!1 &1534110599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3100,7 +3154,7 @@ GameObject:
   - component: {fileID: 1930829714}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3128,6 +3182,8 @@ MonoBehaviour:
   Level1ButtonText: {fileID: 1948613483}
   Level2ButtonText: {fileID: 1972567071}
   Level3ButtonText: {fileID: 8107559}
+  RestartButton: {fileID: 0}
+  RestartButtonText: {fileID: 0}
   QuitButton: {fileID: 572513408}
   QuitButtonText: {fileID: 1639339450}
   PauseButton: {fileID: 2101049227}

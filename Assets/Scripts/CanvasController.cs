@@ -33,6 +33,10 @@ public class CanvasController : MonoBehaviour {
 	[SerializeField]
 	public Text Level3ButtonText;
 	[SerializeField]
+	public Button RestartButton;
+	[SerializeField]
+	public Text RestartButtonText;
+	[SerializeField]
 	public Button QuitButton;
 	[SerializeField]
 	public Text QuitButtonText;
@@ -127,6 +131,8 @@ public class CanvasController : MonoBehaviour {
 		QuitButtonText.gameObject.SetActive(true);
 		PauseButton.gameObject.SetActive(false);
 		PauseButton.gameObject.SetActive(false);
+		RestartButton.gameObject.SetActive(false);
+		RestartButtonText.gameObject.SetActive(false);
 	}
 
 	public void GameStart()
@@ -152,6 +158,8 @@ public class CanvasController : MonoBehaviour {
 		QuitButtonText.gameObject.SetActive(false);
 		PauseButton.gameObject.SetActive(false);
 		PauseButton.gameObject.SetActive(false);
+		RestartButton.gameObject.SetActive(false);
+		RestartButtonText.gameObject.SetActive(false);
 	}
 
 	public void GamePause()
@@ -173,6 +181,8 @@ public class CanvasController : MonoBehaviour {
 		QuitButtonText.gameObject.SetActive(true);
 		PauseButton.gameObject.SetActive(true);
 		PauseButton.gameObject.SetActive(true);
+		RestartButton.gameObject.SetActive(false);
+		RestartButtonText.gameObject.SetActive(false);
 		MenuLabel.text = "Game Paused";
 	}
 
@@ -258,7 +268,29 @@ public class CanvasController : MonoBehaviour {
 
 	public void Level3ButtonClick()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		// Create a temporary reference to the current scene.
+		Scene currentScene = SceneManager.GetActiveScene();
+
+		// Retrieve the name of this scene.
+		string sceneName = currentScene.name;
+		if (sceneName == "level3")
+		{	
+			
+			if (PlayerPrefs.GetInt("isDead") == 1)
+			{
+				PlayerPrefs.SetInt("isDead", 1);
+				SceneManager.LoadScene("level3");
+			}
+			else
+			{
+				GameStart();
+			}
+		}
+		else
+		{
+			SceneManager.LoadScene("level3");
+		}
+		//SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 
 	public void ResumeButtonClick()
@@ -289,5 +321,10 @@ public class CanvasController : MonoBehaviour {
 		{
 			_lifeSound.Play();
 		}
+	}
+
+	public void RestartButtonClick() {
+
+		SceneManager.LoadScene ("main");
 	}
 }

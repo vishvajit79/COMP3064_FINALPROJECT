@@ -62,7 +62,8 @@ public class EnemyController : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D collision2D)
 	{
-		if (collision2D.gameObject.tag == "obstacle" || collision2D.gameObject.tag == "random")
+		if (collision2D.gameObject.tag == "obstacle" || collision2D.gameObject.tag == "random" 
+			|| collision2D.gameObject.tag == "door" || collision2D.gameObject.tag == "bomb")
 		{
 			StartCoroutine(GodMod(0.01f));
 		}

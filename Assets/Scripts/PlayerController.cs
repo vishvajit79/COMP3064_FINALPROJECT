@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
     private AudioSource _doorSound;
     private AudioSource _clockSound;
     private AudioSource _obstacleSound;
+	private AudioSource _explosionSound;
 
     private bool godMode = false;
     private int counter = 0;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         _doorSound = _sounds[2];
         _clockSound = _sounds[3];
         _obstacleSound = _sounds[4];
+		_explosionSound = _sounds[5];
 
     }
 
@@ -182,6 +184,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D coll)
     {
+        if (coll.gameObject.tag == "bomb")
+        {
+            Debug.Log("Collision bomb\n");
+            if (_explosionSound != null)
+            {
+                _explosionSound.Play();
+            }
+            coll.gameObject.
+            GetComponent<ObstacleManager>()
+                .DestroyMe();
+            StartCoroutine(Blink());
+        }
         if (coll.gameObject.tag == "obstacle")
         {
             if (Input.GetKey(KeyCode.Space))
@@ -207,13 +221,13 @@ public class PlayerController : MonoBehaviour
                 Player.Instance.Life--;
             }
         }
-        if (coll.gameObject.tag == "enemy")
+		if (coll.gameObject.tag == "enemy")
         {
             if (Input.GetKey(KeyCode.Space))
             {
                 counter += 1;
                 StartCoroutine(GodMod(3));
-                Debug.Log("Collision obstacle\n");
+                Debug.Log("Collision enemy\n");
                 if (_hitSound != null)
                 {
                     _hitSound.Play();
@@ -237,6 +251,7 @@ public class PlayerController : MonoBehaviour
                 Player.Instance.Life--;
             }
         }
+		
         if (coll.gameObject.tag == "clock")
         {
             Debug.Log("Collision clock\n");
@@ -273,9 +288,10 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-
                 gameController.GameOver();
-                gameController.MenuLabel.text = "Level 1 finished - Click on Level 2 to play next level";
+                gameController.MenuLabel.text = "Congratulations!!! You have completed all the levels";
+				gameController.RestartButton.gameObject.SetActive(true);
+				gameController.RestartButtonText.gameObject.SetActive(true);
             }
         }
     }

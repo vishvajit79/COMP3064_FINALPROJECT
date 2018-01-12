@@ -9,6 +9,8 @@ TagManager:
   - door
   - enemy
   - random
+  - bomb
+  - ground
   layers:
   - Default
   - TransparentFX
